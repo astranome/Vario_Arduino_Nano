@@ -1,5 +1,4 @@
 #include <Wire.h> 
-//#include <BMP085.h>
 #include <Adafruit_BMP085.h>
 #include <LiquidCrystal_I2C.h>
 uint8_t bukva1[8] = {
@@ -22,9 +21,8 @@ uint8_t bukva2[8] = {
 };
 LiquidCrystal_I2C lcd(0x27, 16, 2); // Для экрана 16х2 (двухстрочный)
 
-//BMP085 dps = BMP085(); 
 Adafruit_BMP085 dps;   
- long vario=0,vario2=0;
+long vario=0,vario2=0;
 long  Pressure = 0;
 float Temperature = 0, Altitude = 0;
 const int n=20;
